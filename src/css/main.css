@@ -5,16 +5,7 @@ form {
   flex-direction: row;
   gap: 8px;
   padding-top: 38px;
-  border-bottom: #808080;
   margin-bottom: 32px;
-}
-
-form:hover {
-  border-color: #000000;
-}
-
-form:focus {
-  border-color: #4e75ff;
 }
 
 input {
@@ -27,6 +18,17 @@ input {
   letter-spacing: 0.04em;
   color: #808080;
   padding-left: 16px;
+  border: 1px solid #808080;
+  outline: none;
+  transition: border-color 250ms ease-in-out;
+}
+
+input:hover {
+  border-color: #000000;
+}
+
+input:focus {
+  border-color: #4e75ff;
 }
 
 button {
@@ -138,15 +140,21 @@ p {
   align-items: center;
 }
 
+.loader-container {
+  display: flex;
+  justify-content: center;
+}
+
 .loader {
   width: 48px;
   height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #4e75ff;
   border-radius: 50%;
   display: inline-block;
-  border-top: 3px solid #fff;
-  border-right: 3px solid transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
+  margin-top: 48px;
 }
 
 @keyframes rotation {
@@ -156,4 +164,8 @@ p {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.hidden {
+  display: none;
 }

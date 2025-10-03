@@ -40,9 +40,9 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  loader.style.display = 'block';
+  loader.classList.remove('hidden');
 }
 
 export function hideLoader() {
-  loader.style.display = 'none';
+  loader.classList.add('hidden');
 }
